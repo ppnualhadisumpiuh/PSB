@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>PSB Ponpes Al-Hadi Kebokura Sumpiuh</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                cursor: none;
+            }
+            body {
+                font-family: "Poppins", sans-serif;
+                background: #f3fff5;
+                color: #14532d;
+                overflow-x: hidden;
+            }
+            header {
+                background: linear-gradient(135deg, #166534, #22c55e);
+                color: white;
+                padding: 80px 20px;
+                text-align: center;
+            }
+            header h1 {
+                font-size: 2.5rem;
+            }
+            header p {
+                opacity: 0.9;
+            }
+            header img {
+                padding: 80px 20px;
+                align-content: center;
+            }
+            section {
+                padding: 70px 20px;
+                max-width: 1100px;
+                margin: auto;
+            }
+            h2 {
+                margin-bottom: 20px;
+                font-size: 2rem;
+                color: #166534;
+            }
+            .card {
+                background: white;
+                padding: 25px;
+                border-radius: 18px;
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+                margin-bottom: 25px;
+                transition:
+                    transform 0.25s ease,
+                    box-shadow 0.25s ease;
+            }
+            .card:hover {
+                transform: scale(1.04);
+                box-shadow: 0 15px 35px rgba(34, 197, 94, 0.25);
+            }
+            ul li {
+                margin-left: 20px;
+                margin-bottom: 8px;
+            }
+
+            .gallery {
+                display: flex;
+                flex-wrap: wrap;
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                gap: 10px;
+                transition:
+                    transform 0.25s ease,
+                    box-shadow 0.25s ease;
+            }
+            .gallery img {
+                background: #bbf7d0;
+                width: 100%;
+                height: 160px;
+                border-radius: 12px;
+                display: block;
+                align-items: center;
+                justify-content: center;
+                font-weight: 600;
+            }
+
+            .galery .item {
+                width: calc(50% - 5px);
+            }
+
+            .gallery:hover {
+                transform: scale(1.04);
+                box-shadow: 0 15px 35px rgba(34, 197, 94, 0.25);
+            }
+            form input,
+            form textarea {
+                width: 100%;
+                padding: 12px;
+                margin-bottom: 15px;
+                border-radius: 12px;
+                border: 2px solid #86efac;
+                font-family: inherit;
+                transition:
+                    transform 0.25s ease,
+                    box-shadow 0.25s ease,
+                    border-color 0.25s ease;
+            }
+            form input:hover,
+            form textarea:hover,
+            form input:focus,
+            form textarea:focus {
+                transform: scale(1.06);
+                box-shadow: 0 10px 25px rgba(34, 197, 94, 0.35);
+                border-color: #22c55e;
+                outline: none;
+            }
+            form button {
+                background: #16a34a;
+                color: white;
+                border: none;
+                padding: 14px;
+                border-radius: 14px;
+                font-weight: 600;
+                width: 100%;
+            }
+
+            footer {
+                background: #14532d;
+                color: white;
+                text-align: center;
+                padding: 25px;
+            }
+
+            /* custom cursor */
+            .cursor {
+                position: fixed;
+                pointer-events: none;
+                transform: translate(-50%, -50%) scale(1);
+                transition:
+                    transform 0.15s ease,
+                    background 0.15s ease;
+                z-index: 9999;
+            }
+            .cursor.active {
+                transform: translate(-50%, -50%) scale(2.2);
+                background: rgba(34, 197, 94, 0.2);
+            }
+            .info-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+                overflow: hidden;
+                border-radius: 14px;
+            }
+
+            .info-table th,
+            .info-table td {
+                padding: 12px 15px;
+                text-align: left;
+            }
+
+            .info-table th {
+                background: #16a34a;
+                color: white;
+                width: 35%;
+            }
+
+            .info-table td {
+                background: #dcfce7;
+            }
+
+            .info-table tr:hover td {
+                background: #bbf7d0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="cursor"></div>
+        <header class="reveal">
+            <h1>Penerimaan Santri Baru</h1>
+            <p>Pondok Pesantren Al-Hadi Kebokura Sumpiuh</p>
+        </header>
+        <section class="reveal">
+            <h2>Profil Pondok</h2>
+            <div class="card">
+                <p>
+                    <strong>Lokasi:</strong> Kelurahan Kebokura, Kecamatan
+                    Sumpiuh, Kabupaten Banyumas
+                </p>
+                <br />
+                <p>
+                    <strong> Tanggal Resmi Berdiri: </strong>
+                    18 Juli 2018
+                </p>
+                <br />
+                <p>
+                    <strong>Sejarah Singkat:</strong> Sebelum berdiri pondok,
+                    terdapat Masjid Baetus Salam Kebokura di atas tanah wakaf
+                    keluarga Bp. H. Soeroso Rekso Hadi Soeroso (alm) & Ibu Hj.
+                    Siti Robingah (almh). Pondok awalnya bernama Pondok
+                    Pesantren NU Sumpiuh, dibangun atas dukungan PT. Pamapersada
+                    Nusantara dan tokoh NU setempat. Luas Tanah: 4.191 m², tanah
+                    wakaf Badan Hukum Wakaf NU (Wakif: Ibu Ening Wiji Sayekti &
+                    Ibu Dra. Hj. Peni Rahayu, M.Si) Pengelola: Yayasan
+                    Arrobingah Kebokura Sumpiuh Alamat Yayasan: RT 5 RW 1
+                    Kelurahan Kebokura, Kec. Sumpiuh Ketua Yayasan: Suyatno
+                    Nomor Legal: AHU 0012116.AH.01.04 TAHUN 2024
+                </p>
+            </div>
+        </section>
+        <section class="reveal">
+            <h2>Visi & Misi</h2>
+            <div class="card">
+                <strong>Visi</strong>
+                <p>
+                    Pondok Pesantren Nahdhatul Ulama menjadi pesantren yang
+                    unggul dalam prestasi ilmu, mencetak kader pemimpin yg
+                    beriman dan berahlakul karimah.
+                </p>
+                <br />
+                <strong>Misi</strong>
+                <ul>
+                    <li>
+                        Menanamkan karakter perjuangan, kepemimpinan, menghargai
+                        kualitas,jujur, dan kreatif.
+                    </li>
+                    <li>
+                        Membangun manusia yang kukuh dalam agama dobir dan
+                        kebathinan, kecerdasan, intelektual, dan spiritual
+                    </li>
+                    <li>
+                        Menciptakan lembaga pendidikan yang progresif dengan
+                        guru yang memiliki kualitas yang mualim, muaddib,
+                        murobbi, mursyid, dengan manajemen modern, dan berbasis
+                        pesantren
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="reveal">
+            <h2>Dokumentasi Santri</h2>
+            <div class="gallery">
+                <div class="item">
+                    <img src="img/IMG-20260209-WA0006.jpg" />
+                </div>
+                <div class="item">
+                    <img src="img/IMG-20260209-WA0042.jpg" />
+                </div>
+                <div class="item">
+                    <img src="img/IMG-20260209-WA0010.jpg" />
+                </div>
+                <div class="item">
+                    <img src="img/IMG-20260209-WA0030.jpg" />
+                </div>
+                <div class="item">
+                    <img src="img/IMG-20260209-WA0041.jpg" />
+                </div>
+                <div class="item">
+                    <img src="img/IMG-20260209-WA0035.jpg" />
+                </div>
+            </div>
+        </section>
+        <section class="reveal">
+            <h2>Syarat Pendaftaran</h2>
+            <div class="card">
+                <ul>
+                    <li>FC Ijazah SD/MTS/Sederajat</li>
+                    <li>FC KK & Akta Kelahiran</li>
+                    <li>Mengisi formulir pendaftaran</li>
+                </ul>
+            </div>
+        </section>
+        <section class="reveal">
+            <h2>Kontak</h2>
+            <div class="card">
+                📞 +62 812-1523-3761/+62 857-2631-9058<br />
+                📍 Kebokura, Sumpiuh
+            </div>
+        </section>
+        <section class="reveal">
+            <h2>Formulir Pendaftaran</h2>
+            <div class="card">
+                <form id="daftarForm">
+                    <input
+                        type="text"
+                        id="nama"
+                        placeholder="Nama Lengkap"
+                        required
+                    />
+                    <input type="text" id="asal" placeholder="Asal" required />
+                    <textarea
+                        id="harapan"
+                        placeholder="Harapan"
+                        required
+                    ></textarea>
+                    <button type="submit">Kirim Pendaftaran</button>
+                </form>
+            </div>
+        </section>
+        <footer>© PSB Ponpes Al-Hadi Kebokura Sumpiuh</footer>
+        <script>
+            ScrollReveal().reveal(".reveal", {
+                distance: "60px",
+                duration: 1200,
+                easing: "ease",
+                origin: "bottom",
+                reset: true
+            });
+
+            const cursor = document.querySelector(".cursor");
+            document.addEventListener("mousemove", e => {
+                cursor.style.left = e.clientX + "px";
+                cursor.style.top = e.clientY + "px";
+            });
+
+            document
+                .querySelectorAll("input, textarea, button, .card")
+                .forEach(el => {
+                    el.addEventListener("mouseenter", () =>
+                        cursor.classList.add("active")
+                    );
+                    el.addEventListener("mouseleave", () =>
+                        cursor.classList.remove("active")
+                    );
+                });
+
+            const webhook =
+                "https://discord.com/api/webhooks/1363424541094707262/g-Bj_JHvFz1WCbXA5z73An5XxqrqLeY3ETTLy5eAMfYjdH48Ezypv7V_okXafHh55BIO";
+            document
+                .getElementById("daftarForm")
+                .addEventListener("submit", async e => {
+                    e.preventDefault();
+                    const nama = document.getElementById("nama").value;
+                    const asal = document.getElementById("asal").value;
+                    const harapan = document.getElementById("harapan").value;
+
+                    await fetch(webhook, {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({
+                            embeds: [
+                                {
+                                    title: "Pendaftaran Santri Baru",
+                                    color: 0x16a34a,
+                                    fields: [
+                                        { name: "Nama Lengkap", value: nama },
+                                        { name: "Asal", value: asal },
+                                        { name: "Harapan", value: harapan }
+                                    ],
+                                    footer: {
+                                        text: "PSB Al-Hadi Kebokura Sumpiuh"
+                                    }
+                                }
+                            ]
+                        })
+                    });
+
+                    Swal.fire({
+                        title: "Success",
+                        text: "Pendaftaran terkirim!",
+                        icon: "success"
+                    });
+                    e.target.reset();
+                });
+        </script>
+    </body>
+</html>
